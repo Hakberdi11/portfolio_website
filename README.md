@@ -21,11 +21,9 @@ then open `http://localhost:8000`.
 
 ## TODO
 
-A few outbound links were placeholders (`#`) in the original site's rendered output and need the real URLs filled in in `index.html`:
+A few outbound links still need real URLs filled in in `index.html`:
 
-- LinkedIn profile
-- GitHub profile
-- Medium blog
+- Medium blog (the URL provided was a private `medium.com/me/settings` page, not a public profile — needs `medium.com/@username` or similar)
 - "Dostoyevsky Society" interview link
 - "YouTube Feature" video link
 - "Gym AI" project link
