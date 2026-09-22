@@ -231,6 +231,18 @@ a {
   opacity: 0.7;
 }
 
+.work__item--pending {
+  cursor: default;
+}
+
+.work__item--pending:hover {
+  opacity: 1;
+}
+
+.work__item--pending .work__link {
+  color: var(--muted);
+}
+
 @media (min-width: 640px) {
   .work__item {
     grid-template-columns: 1fr 2fr auto;
@@ -346,6 +358,10 @@ a {
 .footer__medium span:first-child {
   font-size: clamp(1.5rem, 5vw, 2.25rem);
   font-weight: 800;
+}
+
+.footer__medium--pending .work__link {
+  color: var(--muted);
 }
 
 .footer__bottom {

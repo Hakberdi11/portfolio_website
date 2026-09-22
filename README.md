@@ -21,10 +21,5 @@ then open `http://localhost:8000`.
 
 ## TODO
 
-A few outbound links still need real URLs filled in in `index.html`:
-
-- Medium blog (the URL provided was a private `medium.com/me/settings` page, not a public profile — needs `medium.com/@username` or similar)
-- "Dostoyevsky Society" interview link
-- "YouTube Feature" video link
-- "Gym AI" project link
-- "WordyTeach" project link
+- Medium blog link is still blank (footer) — add the public profile URL (`medium.com/@username`) once available.
+- "Gym AI" and "WordyTeach" are marked "In progress" (not linked) since they aren't hosted yet — swap to real links once they're live.
