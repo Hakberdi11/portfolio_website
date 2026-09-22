@@ -6,91 +6,85 @@
   <title>Hakberdi Orazov — Portfolio</title>
   <meta name="description" content="AI development, Dostoyevsky & literature, fitness, and philosophy — the portfolio of Hakberdi Orazov." />
   <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
   <header class="nav">
-    <a href="#top" class="nav__brand">HO <span>/ 2026</span></a>
+    <a href="#top" class="nav__brand">Hakberdi<span>.</span></a>
     <nav class="nav__links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="nav__cta" href="#contact">Get in touch</a>
   </header>
 
   <main>
     <section id="top" class="hero">
-      <img class="hero__photo" src="assets/img/hero.jpg" alt="Portrait of Hakberdi Orazov" />
-      <div class="hero__name" aria-hidden="true">
-        <span class="fill">HAKBERDI</span>
-        <span class="outline">ORAZOV</span>
+      <div class="hero__card">
+        <div class="hero__top">
+          <div>
+            <p class="hero__greeting">Hey, there</p>
+            <span class="pill pill--status"><span class="pill__dot"></span>Open to new projects</span>
+          </div>
+          <p class="hero__specialty">Specialized in AI development,<br />literature, and philosophy.</p>
+        </div>
+
+        <div class="hero__photo-frame">
+          <img class="hero__photo" src="assets/img/hero.jpg" alt="Portrait of Hakberdi Orazov" />
+        </div>
+
+        <div class="hero__bottom">
+          <h1 class="hero__name">I am<br />Hakberdi</h1>
+          <p class="hero__tagline">AI &middot; Literature &middot; Philosophy</p>
+        </div>
       </div>
-      <h1 class="sr-only">Hakberdi Orazov</h1>
     </section>
 
     <section id="work" class="work">
-      <div class="work__intro">
-        <div>
-          <p class="eyebrow">Portfolio</p>
-          <p class="eyebrow eyebrow--muted">AI &middot; Literature &middot; Philosophy</p>
-        </div>
-        <a href="#work-list" class="scroll-cue">Scroll <span>&darr;</span></a>
+      <div class="section__head">
+        <p class="eyebrow-script">Selected</p>
+        <h2>Recent Work</h2>
       </div>
 
-      <div class="work__heading">
-        <h2>Work</h2>
-        <span class="eyebrow">Selected</span>
-      </div>
-      <hr />
+      <div class="work__grid">
+        <a class="work__card" href="https://youtu.be/HkKrFWgLXZ0" target="_blank" rel="noopener">
+          <span class="pill pill--tag">Interview &middot; 45 min</span>
+          <h3>Dostoyevsky Society</h3>
+          <p>2026</p>
+          <span class="work__card-link">Watch &rarr;</span>
+        </a>
 
-      <div id="work-list" class="work__list">
-        <div class="work__group">
-          <div class="work__group-head">
-            <h3>Interviews</h3>
-            <span class="eyebrow">01</span>
-          </div>
-
-          <a class="work__item" href="https://youtu.be/HkKrFWgLXZ0" target="_blank" rel="noopener">
-            <span class="eyebrow">2026 &middot; Interview &middot; 45 min</span>
-            <span class="work__title">Dostoyevsky Society</span>
-            <span class="work__link">View &rarr;</span>
-          </a>
+        <div class="work__card work__card--pending">
+          <span class="pill pill--tag">Current project</span>
+          <h3>Gym AI</h3>
+          <p>2026</p>
+          <span class="work__card-link">In progress</span>
         </div>
 
-        <div class="work__group">
-          <div class="work__group-head">
-            <h3>Apps / Projects</h3>
-            <span class="eyebrow">02</span>
-          </div>
-
-          <div class="work__item work__item--pending">
-            <span class="eyebrow">2026 &middot; Current project</span>
-            <span class="work__title">Gym AI</span>
-            <span class="work__link">In progress</span>
-          </div>
-
-          <div class="work__item work__item--pending">
-            <span class="eyebrow">2025 &middot; EdTech</span>
-            <span class="work__title">WordyTeach</span>
-            <span class="work__link">In progress</span>
-          </div>
+        <div class="work__card work__card--pending">
+          <span class="pill pill--tag">EdTech</span>
+          <h3>WordyTeach</h3>
+          <p>2025</p>
+          <span class="work__card-link">In progress</span>
         </div>
       </div>
     </section>
 
     <section id="about" class="about">
-      <div class="about__mark">
-        <div class="about__name">
-          <span class="fill">HAKBERDI</span>
-          <span class="outline">ORAZOV</span>
+      <div class="about__intro">
+        <p class="eyebrow-script">A little about me</p>
+        <h2>Hakberdi Orazov</h2>
+        <div class="about__tags">
+          <span class="pill pill--tag">AI Development</span>
+          <span class="pill pill--tag">Dostoyevsky &amp; Literature</span>
+          <span class="pill pill--tag">Fitness &amp; Wellness</span>
+          <span class="pill pill--tag">Philosophy</span>
         </div>
-        <ol class="about__topics">
-          <li><span class="eyebrow">01</span> AI Development</li>
-          <li><span class="eyebrow">02</span> Dostoyevsky &amp; Literature</li>
-          <li><span class="eyebrow">03</span> Fitness &amp; Wellness</li>
-          <li><span class="eyebrow">04</span> Philosophy</li>
-        </ol>
       </div>
 
       <div class="about__copy">
@@ -101,27 +95,32 @@
     </section>
 
     <section id="contact" class="contact">
-      <p class="eyebrow">Get in touch</p>
+      <div class="section__head">
+        <p class="eyebrow-script">Let's talk</p>
+        <h2>Get in touch</h2>
+      </div>
 
-      <a class="contact__item" href="mailto:hakyorazov@gmail.com">
-        <span class="contact__label">Email</span>
-        <span class="contact__value">hakyorazov@gmail.com &rarr;</span>
-      </a>
-      <a class="contact__item" href="https://www.linkedin.com/in/hakberdi-orazov-99209b332" target="_blank" rel="noopener">
-        <span class="contact__label">LinkedIn</span>
-        <span class="contact__value">Connect &rarr;</span>
-      </a>
-      <a class="contact__item" href="https://github.com/Hakberdi11" target="_blank" rel="noopener">
-        <span class="contact__label">GitHub</span>
-        <span class="contact__value">View profile &rarr;</span>
-      </a>
+      <div class="contact__list">
+        <a class="contact__item" href="mailto:hakyorazov@gmail.com">
+          <span class="contact__label">Email</span>
+          <span class="contact__value">hakyorazov@gmail.com &rarr;</span>
+        </a>
+        <a class="contact__item" href="https://www.linkedin.com/in/hakberdi-orazov-99209b332" target="_blank" rel="noopener">
+          <span class="contact__label">LinkedIn</span>
+          <span class="contact__value">Connect &rarr;</span>
+        </a>
+        <a class="contact__item" href="https://github.com/Hakberdi11" target="_blank" rel="noopener">
+          <span class="contact__label">GitHub</span>
+          <span class="contact__value">View profile &rarr;</span>
+        </a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer__medium footer__medium--pending">
       <span>Medium</span>
-      <span class="work__link">Coming soon</span>
+      <span class="pill pill--tag">Coming soon</span>
     </div>
     <div class="footer__bottom">
       <span>&copy; 2026 Hakberdi Orazov</span>
