@@ -192,13 +192,13 @@ a {
 
 .hero__photo-frame {
   position: absolute;
-  right: clamp(1rem, 6vw, 5rem);
-  bottom: clamp(1rem, 4vw, 2.5rem);
-  width: clamp(14rem, 26vw, 22rem);
+  right: 0;
+  bottom: 0;
+  top: clamp(4.5rem, 11vh, 6.5rem);
+  height: calc(100% - clamp(4.5rem, 11vh, 6.5rem));
   aspect-ratio: 3 / 4;
-  border-radius: 20px;
+  border-radius: 16px 0 0 0;
   overflow: hidden;
-  box-shadow: 0 24px 50px rgba(28, 26, 23, 0.25);
   z-index: 1;
 }
 
@@ -218,7 +218,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
-  max-width: 60%;
+  max-width: 46%;
 }
 
 .hero__name {
