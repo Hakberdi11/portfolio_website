@@ -1,14 +1,21 @@
 :root {
-  --page-bg: #ffffff;
-  --card-bg: #000000;
+  --bg: #000000;
   --fg: #f2f2f3;
   --muted: #9a9aa2;
-  --line: rgba(255, 255, 255, 0.1);
-  --accent: #f0a044;
+  --line: rgba(255, 255, 255, 0.12);
   --tag-bg: rgba(255, 255, 255, 0.06);
+  --accent: #f0a044;
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
   --font: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --radius: 20px;
+}
+
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #16161a;
+  --muted: #68686f;
+  --line: rgba(0, 0, 0, 0.12);
+  --tag-bg: rgba(0, 0, 0, 0.05);
+  --accent: #c9701f;
 }
 
 * {
@@ -22,11 +29,12 @@ html {
 }
 
 body {
-  background: var(--page-bg);
+  background: var(--bg);
   color: var(--fg);
   font-family: var(--font);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 a {
@@ -46,24 +54,17 @@ a {
 .shell {
   max-width: 760px;
   margin: 0 auto;
-  padding: clamp(1rem, 4vw, 2rem) var(--gutter) 6rem;
+  padding: 0 var(--gutter) 6rem;
 }
 
-/* Cards */
-.card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  margin-top: 1.5rem;
-  overflow: hidden;
-}
-
+/* Nav */
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(8px);
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .site-nav__inner {
@@ -127,8 +128,43 @@ a {
   color: var(--fg);
 }
 
-.card__body {
-  padding: clamp(1.75rem, 5vw, 3rem);
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 15px;
+  height: 15px;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+/* Sections */
+.section {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
 }
 
 /* Squiggle divider */
@@ -139,7 +175,7 @@ a {
   color: var(--accent);
 }
 
-/* Hero card */
+/* Hero */
 .hero__greeting {
   font-size: clamp(1.4rem, 3.2vw, 1.75rem);
   font-weight: 700;
@@ -150,7 +186,7 @@ a {
 }
 
 .hero__bio {
-  color: #c7c7ce;
+  color: var(--muted);
   font-size: 0.98rem;
   max-width: 34rem;
 }
@@ -171,7 +207,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem 1.75rem;
-  margin-bottom: 2.25rem;
 }
 
 .find-me a {
@@ -194,7 +229,7 @@ a {
 
 .mini-contact p {
   font-size: 0.9rem;
-  color: #c7c7ce;
+  color: var(--muted);
 }
 
 .mini-contact a {
@@ -204,38 +239,23 @@ a {
   text-underline-offset: 3px;
 }
 
-/* Footer bar (inside card) */
-.card__footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.1rem 1.5rem;
-  border-top: 1px solid var(--line);
+/* Footer */
+.footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem var(--gutter) 3rem;
   font-size: 0.78rem;
   color: var(--muted);
 }
 
-.card__footer-links {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
-}
-
-.card__footer-links svg {
-  width: 15px;
-  height: 15px;
-}
-
-/* Section cards (Work/About/Contact) */
+/* Section headings */
 .section__heading {
   font-size: clamp(1.5rem, 3.5vw, 1.9rem);
   font-weight: 800;
 }
 
 .section__intro {
-  color: #c7c7ce;
+  color: var(--muted);
   font-size: 0.98rem;
   max-width: 34rem;
   margin-top: 0.5rem;
@@ -309,14 +329,14 @@ a {
 .timeline__item ul {
   list-style: disc;
   padding-left: 1.1rem;
-  color: #c7c7ce;
+  color: var(--muted);
   font-size: 0.9rem;
   display: grid;
   gap: 0.2rem;
 }
 
 @media (max-width: 640px) {
-  .card__nav {
+  .site-nav__inner {
     flex-wrap: wrap;
     row-gap: 0.6rem;
   }
