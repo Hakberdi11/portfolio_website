@@ -22,4 +22,5 @@ then open `http://localhost:8000`.
 ## TODO
 
 - Medium blog link is still blank (footer) — add the public profile URL (`medium.com/@username`) once available.
-- "Gym AI" and "WordyTeach" are marked "In progress" (not linked) since they aren't hosted yet — swap to real links once they're live.
+- "WordyTeach" is marked "In progress" (not linked) since it isn't hosted yet — swap to a real link once live.
+- "Becomingly" has no public link yet (invite-only launch) — add one once there's a shareable URL.
