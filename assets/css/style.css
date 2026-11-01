@@ -347,20 +347,15 @@ a {
 }
 
 .see-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.45rem 0.95rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--bg);
-  font-size: 0.8rem;
+  display: inline-block;
+  font-size: 0.82rem;
   font-weight: 700;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  color: var(--accent);
 }
 
 .see-more:hover {
-  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Project detail pages */
