@@ -400,16 +400,37 @@ a {
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  display: flex;
   gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .gallery img {
-  width: 100%;
+  flex: 0 0 auto;
+  height: 300px;
+  width: auto;
   border-radius: 10px;
   border: 1px solid var(--line);
   display: block;
+  scroll-snap-align: start;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+  .gallery img {
+    height: 220px;
+  }
 }
 
 .prose {
