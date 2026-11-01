@@ -494,4 +494,8 @@ a {
     width: 100%;
     justify-content: space-between;
   }
+
+  .squiggle {
+    display: none;
+  }
 }
